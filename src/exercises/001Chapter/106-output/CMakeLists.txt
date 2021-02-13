@@ -1,0 +1,1 @@
+add_executable(exe_01_106_exe "main.cpp")
