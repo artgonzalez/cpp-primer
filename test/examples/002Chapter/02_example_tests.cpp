@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "type_conversion.h"
+#include "variable_def.h"
 
 TEST_CASE("Test setting int values to bool variable", "int 0 bool false any other value true")
 {
@@ -38,4 +39,14 @@ TEST_CASE("Test add unsigned int and unsigned int", "")
 TEST_CASE("Test subtract unsigned int and int", "")
 {
     REQUIRE(subtract_int_unsigned_int(10, 10) == 0);
+}
+
+TEST_CASE("Test uninitialized int", "returns random values")
+{
+    REQUIRE(get_uninitialized_int() > 0);
+}
+
+TEST_CASE("Test initialized int", "returns 0")
+{
+    REQUIRE(get_initialized_int() == 0);
 }
