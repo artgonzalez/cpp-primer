@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
-#include "variable_def.h"
+#include "type_conversion.h"
 
 TEST_CASE("Test setting int values to bool variable", "int 0 bool false any other value true")
 {
