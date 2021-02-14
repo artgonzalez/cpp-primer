@@ -1,0 +1,1 @@
+add_executable(exa_02_243_exe "main.cpp")
