@@ -1,1 +1,1 @@
-add_executable(exe_03_321_exe "main.cpp")
+add_executable(exa_03_321_exe "main.cpp")
