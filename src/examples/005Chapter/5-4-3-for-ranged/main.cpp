@@ -12,5 +12,12 @@ int main()
         cout<<c<<'\n';
     }
 
+    for(auto &c: name)
+    {
+        c = 'J';
+    }
+    //value changed with reference; reference to each character in name memory location
+    cout<<name;
+
     return 0;
 }
