@@ -4,6 +4,7 @@
 #include "call_by_value.h"
 #include "call_by_reference.h"
 #include "value_return_function.h"
+#include "default_arguments.h"
 
 TEST_CASE("Test factorial")
 {
@@ -52,4 +53,12 @@ TEST_CASE("Test value return functions", "Pay attention to local function variab
     
     name = "John";
     REQUIRE(name == *name_ptr);
+}
+
+TEST_CASE("Test default args function")
+{
+    REQUIRE(calculate(5, 5, 10) == 35);
+    REQUIRE(calculate(5, 5) == 35);
+    REQUIRE(calculate(5) == 35);
+    REQUIRE(calculate() == 35);
 }
