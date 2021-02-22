@@ -1,0 +1,1 @@
+add_executable(exa_06_625_exe "main.cpp")
