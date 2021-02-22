@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "factorial.h"
 #include "call_by_value.h"
+#include "call_by_reference.h"
 
 TEST_CASE("Test factorial")
 {
@@ -20,6 +21,14 @@ TEST_CASE("Test pointer parameter function", "pointer parameter changes variable
 {
     int num = 10;
     pointer_parameter(&num);
+
+    REQUIRE(num == 0);
+}
+
+TEST_CASE("Test reference parameter function", "reference parameter changes referenced variable")
+{
+    int num = 10;
+    reference_parameter(num);
 
     REQUIRE(num == 0);
 }
