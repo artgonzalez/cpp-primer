@@ -5,6 +5,7 @@
 #include "call_by_reference.h"
 #include "value_return_function.h"
 #include "default_arguments.h"
+#include "inline_constexpr.h"
 
 TEST_CASE("Test factorial")
 {
@@ -61,4 +62,14 @@ TEST_CASE("Test default args function")
     REQUIRE(calculate(5, 5) == 35);
     REQUIRE(calculate(5) == 35);
     REQUIRE(calculate() == 35);
+}
+
+TEST_CASE("Test inline function")
+{
+    REQUIRE(in_calculate(5, 5, 10) == 35);
+}
+
+TEST_CASE("Test constexpr function")
+{
+    REQUIRE(get_num_const_expr(5) == 25);
 }
