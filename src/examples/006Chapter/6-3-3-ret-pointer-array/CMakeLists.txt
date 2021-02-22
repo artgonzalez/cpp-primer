@@ -1,0 +1,1 @@
+#return pointer to array no example
