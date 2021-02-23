@@ -1,9 +1,12 @@
 #ifndef SALES_DATA_CLASS_H
 #define SALES_DATA_CLASS_H
+#include<iostream>
 #include<string>
 
 class SalesData
 {
+friend std::ostream& display(std::ostream& out, const SalesData& data);
+
 public:
     SalesData()=default;
     SalesData(const std::string& bookno) : book_no(bookno){}
