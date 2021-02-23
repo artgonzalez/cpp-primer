@@ -6,6 +6,7 @@
 
 class Screen
 {
+friend class WindowManager;    
 public:
     typedef std::string::size_type pos;//must appear before being used
     Screen() = default;
