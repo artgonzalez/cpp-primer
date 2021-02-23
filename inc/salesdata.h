@@ -5,6 +5,10 @@
 class SalesData
 {
 public:
+    SalesData()=default;
+    SalesData(const std::string& bookno) : book_no(bookno){}
+    SalesData(const std::string& bookno, unsigned n, double p) : book_no(bookno),
+              units_sold(n), revenue(p*n){}
     std::string isbn() const{return this->book_no;}
     double avg_price()const;
 
