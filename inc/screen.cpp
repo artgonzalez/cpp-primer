@@ -13,3 +13,15 @@ inline Screen& Screen::move(pos r, pos c)
     
     return *this;  //return as lvalue
 }
+
+Screen& Screen::set(char c)
+{
+    contents[cursor] = c;
+    return *this;
+}
+
+Screen& Screen::set(pos r, pos col, char ch)
+{
+    contents[r * width + col] = ch;
+    return *this;
+}
