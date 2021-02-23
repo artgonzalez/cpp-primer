@@ -5,7 +5,7 @@
 class SalesData
 {
 public:
-    std::string isbn() const{return book_no;}
+    std::string isbn() const{return this->book_no;}
     double avg_price()const;
 
 private:
