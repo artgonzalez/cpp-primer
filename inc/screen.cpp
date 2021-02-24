@@ -25,3 +25,5 @@ Screen& Screen::set(pos r, pos col, char ch)
     contents[r * width + col] = ch;
     return *this;
 }
+
+const char Screen::back_ground = '*';

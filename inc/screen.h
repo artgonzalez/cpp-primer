@@ -18,11 +18,13 @@ public:
     Screen& set(char c);
     Screen& set(pos h, pos w, char c);
     Screen& display(std::ostream& out){do_display(out); return *this;}
+    Screen& clear(char = back_ground){contents[cursor] = back_ground; return *this;}
 private:
     void do_display(std::ostream& out)const{out<<contents;}
     pos cursor = 0;
     pos height = 0, width = 0;
     std::string contents;
+    static const char back_ground;    
 };
 
 #endif
