@@ -8,7 +8,8 @@ class SalesData
 friend std::ostream& display(std::ostream& out, const SalesData& data);
 
 public:
-    SalesData(const std::string& bookno = "") : book_no(bookno){}//acts as default constructor
+    SalesData() : SalesData("", 0, 0){}//delegating constructor
+    SalesData(const std::string& bookno) : book_no(bookno){}
     SalesData(const std::string& bookno, unsigned n, double p) : book_no(bookno),
               units_sold(n), revenue(p*n){}
     std::string isbn() const{return this->book_no;}
